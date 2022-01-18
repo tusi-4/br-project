@@ -1,43 +1,12 @@
 @import '../../../styles/settings.scss';
 
 .root {
+  background-color: #DECE30;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100vh;
   margin: 0;
-  //padding: $base-size;
-  background-image: url("https://images.pexels.com/photos/4315984/pexels-photo-4315984.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-  background-position: center center;
-  background-size: cover;
-  background-color: #ff0000;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.hpContainer {
-  //background-color: rosybrown;
-  width: 100%;
-  padding: 48px;
-  text-align: right;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
-.hpContainer a {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #fff;
-  margin-top: 18px;
-}
-
-.logo {
-  width: 50%;
-  min-width: 200px;
+  padding: 0;
 }

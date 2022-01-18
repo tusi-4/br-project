@@ -1,0 +1,24 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  background-color: #5E5A31;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact {
+  list-style-type: none;
+  font-size: 12px;
+  color: #fff;
+  :first-child {
+    font-family: 'Comfortaa';
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+.logomini {
+  height: 72px;
+}
