@@ -10,7 +10,7 @@ import { store } from './redux/store';
 import { MainLayout } from './components/layout/MainLayout/MainLayout';
 import { Homepage } from './components/views/Homepage/Homepage';
 import { Product } from './components/views/Product/Product';
-import { Cart } from './components/views/Cart/Cart';
+import { CartPage } from './components/views/CartPage/CartPage';
 import { OrderForm } from './components/views/OrderForm/OrderForm';
 
 const theme = createMuiTheme({
@@ -29,7 +29,7 @@ const App = () => (
             <Switch>
               <Route exact path='/' component={Homepage} />
               <Route exact path='/products/abc' component={Product} />
-              <Route exact path='/cart' component={Cart} />
+              <Route exact path='/cart' component={CartPage} />
               <Route exact path='/form' component={OrderForm} />
             </Switch>
           </MainLayout>
