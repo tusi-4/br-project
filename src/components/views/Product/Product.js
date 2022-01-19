@@ -67,32 +67,33 @@ const demoContent = [
 const Component = (className) => (
   <div className={clsx(className, styles.root)}>
     <div className={clsx(className, styles.menuwrapper)}>
-      <Link className={clsx(className, styles.menulink)} exact to="/">Homepage</Link>
+      <Link className={clsx(className, styles.menulink)} to="/">Homepage</Link>
       <Link className={clsx(className, styles.menulink)} to="/cart">Cart</Link>
     </div>
-    <div className={clsx(className, styles.productwrapper)}>
-      <div className={clsx(className, styles.producttext)}>
-        <div className={clsx(className, styles.info)}>
-          <h3>Berry Me!</h3>
-          <h4>19$</h4>
-          <h5>Ingredients:</h5>
-          <ul>
-            <li>aaa</li>
-            <li>aa</li>
-            <li>a</li>
-          </ul>
+    {demoContent.map(item => (
+      <div key={item._id} className={clsx(className, styles.productwrapper)}>
+        <div className={clsx(className, styles.producttext)}>
+          <div className={clsx(className, styles.info)}>
+            <h3>{item.name}</h3>
+            <h4>{item.minprice}$</h4>
+            <h5>Ingredients:</h5>
+            <ul>
+              {item.ingredients.map(ingredient => (
+                <li key={ingredient}>{ingredient}</li>
+              ))}
+            </ul>
+          </div>
+          <p className={clsx(className, styles.description)}>
+            {item.description}
+          </p>
         </div>
-        <p className={clsx(className, styles.description)}>
-          Lorem ipsum dolor sit amet enim. Etiam ullamcorper. Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies. Curabitur et ligula. Ut molestie a, ultricies porta urna.
-        </p>
+        <div className={clsx(className, styles.productgallery)}>
+          {item.images.map(image => (
+            <img className={clsx(className, styles.productimg)} alt={item.name} key={image} src={image} />
+          ))}
+        </div>
       </div>
-      <div className={clsx(className, styles.productgallery)}>
-        <img className={clsx(className, styles.productimg)} alt="productimg" src="https://images.pexels.com/photos/8679167/pexels-photo-8679167.jpeg" />
-        <img className={clsx(className, styles.productimg)} alt="productimg" src="https://images.pexels.com/photos/8679167/pexels-photo-8679167.jpeg" />
-        <img className={clsx(className, styles.productimg)} alt="productimg" src="https://images.pexels.com/photos/8679167/pexels-photo-8679167.jpeg" />
-        <img className={clsx(className, styles.productimg)} alt="productimg" src="https://images.pexels.com/photos/8679167/pexels-photo-8679167.jpeg" />
-      </div>
-    </div>
+    ))}
   </div>
 );
 
