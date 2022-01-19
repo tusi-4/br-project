@@ -1,57 +1,57 @@
 @import '../../../styles/settings.scss';
 
-.root {
-  background-color: $midgreen;
+.cartpageRoot {
+  background-color: $lightgreen;
 }
 
-.superwrapper {
+.cartpageSuperwrapper {
   width: 80%;
   height: 100vh;
   padding: 48px;
   margin: 0 auto;
 }
 
-.menuwrapper {
+.cartpageMenuwrapper {
   display: flex;
   justify-content: space-between;
   padding: 12px;
   margin: 0 0 72px 0;
 }
 
-.menulink {
+.cartpageMenulink {
   font-size: 18px;
   font-weight: 600;
   color: #fff;
   text-decoration: none;
 }
 
-.cartwrapper {
+.cartpageWrapper {
   max-width: 85%;
   margin: 0 auto;
 }
 
-h3 {
+.cartpageH3 {
   font-family: 'Comfortaa';
-  color: $lightgreen;
+  color: $darkgreen;
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 12px 0;
 }
 
-.itemwrapper {
+.cartpageItemwrapper {
   background-color: #fff;
   border-radius: 6px;
   margin: 24px 0 12px 0;
   padding: 12px;
 }
 
-h5 {
+.cartpageH5 {
   font-size: 15px;
   color: $darkestgreen;
   margin: 0;
 }
 
-.itemdetails {
+.cartpageItemdetails {
   width: 100%;
   font-size: 15px;
   color: $darkestgreen;
@@ -59,17 +59,33 @@ h5 {
   border-collapse: collapse;
 }
 
-td {
+.cartpageTD {
   width: 20%;
   text-align: center;
 }
 
-.itemimg {
+.cartpageItemimg {
   width: 100%;
   height: 120px;
   object-fit: cover;
   display: block;
 }
+
+.cartpageLink {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  text-align: right;
+  color: #fff;
+  margin: 0 0 24px 0;
+}
+
+
+
+
+
+
+
 
 textarea {
   width: 100%;
@@ -84,18 +100,10 @@ textarea {
   resize: none;
 }
 
+
+
 a {
   font-weight: 600;
   color: $midgreen;
   text-decoration: none;
 }
-
-.link {
-  display: block;
-  width: 100%;
-  font-size: 24px;
-  text-align: right;
-  color: #fff;
-  margin: 0 0 24px 0;
-}
-

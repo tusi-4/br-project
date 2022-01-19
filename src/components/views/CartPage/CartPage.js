@@ -37,27 +37,27 @@ const demoContent = [
 ];
 
 const Component = (className) => (
-  <div className={clsx(className, styles.root)}>
-    <div className={clsx(className, styles.superwrapper)}>
-      <div className={clsx(className, styles.menuwrapper)}>
-        <Link className={clsx(className, styles.menulink)} to="/">Homepage</Link>
-        <Link className={clsx(className, styles.menulink)} to="/form">Order</Link>
+  <div className={clsx(className, styles.cartpageRoot)}>
+    <div className={clsx(className, styles.cartpageSuperwrapper)}>
+      <div className={clsx(className, styles.cartpageMenuwrapper)}>
+        <Link className={clsx(className, styles.cartpageMenulink)} to="/">Homepage</Link>
+        <Link className={clsx(className, styles.cartpageMenulink)} to="/form">Order</Link>
       </div>
-      <div className={clsx(className, styles.cartwrapper)}>
-        <h3>Cart</h3>
+      <div className={clsx(className, styles.cartpageWrapper)}>
+        <h3 className={clsx(className, styles.cartpageH3)}>Cart</h3>
         {demoContent.map(item => (
-          <article key={item._id} className={clsx(className, styles.itemwrapper)}>
-            <h5>{item.name}</h5>
-            <table className={clsx(className, styles.itemdetails)}>
+          <article key={item._id} className={clsx(className, styles.cartpageItemwrapper)}>
+            <h5 className={clsx(className, styles.cartpageH5)}>{item.name}</h5>
+            <table className={clsx(className, styles.cartpageItemdetails)}>
               <tbody>
                 <tr>
-                  <td>
-                    <img className={clsx(className, styles.itemimg)} alt={item.name} key={item.images[0]} src={item.images[0]} />
+                  <td className={clsx(className, styles.cartpageTD)}>
+                    <img className={clsx(className, styles.cartpageItemimg)} alt={item.name} key={item.images[0]} src={item.images[0]} />
                   </td>
-                  <td>ilościownik</td>
-                  <td>{item.minprice}$</td>
-                  <td>usuwacz</td>
-                  <td>
+                  <td className={clsx(className, styles.cartpageTD)}>ilościownik</td>
+                  <td className={clsx(className, styles.cartpageTD)}>{item.minprice}$</td>
+                  <td className={clsx(className, styles.cartpageTD)}>usuwacz</td>
+                  <td className={clsx(className, styles.cartpageTD)}>
                     <textarea placeholder="additional preferences, eg. no ice"></textarea>
                     <a href="">add</a>
                   </td>
@@ -66,7 +66,7 @@ const Component = (className) => (
             </table>
           </article>
         ))}
-        <Link className={clsx(className, styles.link)} to="/form">Order</Link>
+        <Link className={clsx(className, styles.cartpageLink)} to="/form">Order</Link>
       </div>
     </div>
   </div>

@@ -4,31 +4,31 @@
   background-color: $darkgreen;
 }
 
-.superwrapper {
+.formSuperwrapper {
   width: 80%;
   height: 100vh;
   padding: 48px;
   margin: 0 auto;
 }
 
-.menuwrapper {
+.formMenuwrapper {
   display: flex;
   justify-content: space-between;
   padding: 12px;
   margin: 0 0 72px 0;
 }
 
-.menulink {
+.formMenulink {
   font-size: 18px;
   font-weight: 600;
-  color: #fff;
+  color: $midgreen;
   text-decoration: none;
 }
 
-.cartsummary {
-}
+// .formCartsummary {
+// }
 
-h4 {
+.formH4 {
   font-family: 'Comfortaa';
   font-size: 30px;
   font-weight: 500;
@@ -36,25 +36,25 @@ h4 {
   margin: 0 0 12px 0;
 }
 
-.itemdetails {
-  background-color: #fff;
+.formItemdetails {
+  background-color: $darkestgreen;
   width: 100%;
   font-size: 15px;
-  color: $darkestgreen;
+  color: #fff;
   border: 0;
   border-collapse: collapse;
 }
 
-tr {
- border-bottom: $darkestgreen 2px solid;
+.formTR {
+ border-bottom: $darkgreen 6px solid;
 }
 
-td {
+.formTD {
   text-align: center;
   padding: 0;
 }
 
-.itemimg {
+.formItemimg {
   width: 100%;
   height: 60px;
   object-fit: cover;
@@ -62,7 +62,7 @@ td {
   margin: 0;
 }
 
-.sum {
+.formSum {
   display: block;
   width: 100%;
   font-size: 18px;
@@ -71,8 +71,8 @@ td {
   margin: 12px 0 24px 0;
 }
 
-.formwrapper {
-}
+// .formWrapper {
+// }
 
 h3 {
   font-family: 'Comfortaa';
@@ -87,20 +87,20 @@ h3 {
  flex-direction: column;
 }
 
-input {
+.formInput {
   width: 40%;
   height: 36px;
   padding: 6px;
-  border: $lightgreen 0.5px solid;
+  border: none;
   border-radius: 3px;
-  background-color: #fff;
+  background-color: $midgreen;
   font-family: 'Open Sans';
   font-size: 12px;
-  color: purple;
+  color: red;
   margin: 3px 0;
 }
 
-.link {
+.formLink {
   display: block;
   width: 100%;
   font-size: 24px;
