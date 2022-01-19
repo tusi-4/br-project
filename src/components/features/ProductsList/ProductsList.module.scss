@@ -9,9 +9,51 @@
 
 .header2 {
   color: #fff;
-  margin: 0;
+  margin: 0 0 24px 0;
 }
 
-.wrapper {
- background-color: blueviolet;
+.gallerywrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.galleryelem {
+  position: relative;
+  width: 33.3333%;
+  margin: 0;
+  padding: 0;
+}
+
+.productimg {
+  width: 100%;
+  // height: auto;
+  opacity: 1;
+  display: block;
+}
+
+.galleryelem:hover .productimg {
+  opacity: 0.2;
+}
+
+.productinfo {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Comfortaa';
+  color: #5E5715;
+  h3 {
+  font-size: 48px;
+  font-weight: 700;
+  }
+  span {
+    font-size: 36px;
+  }
+}
+
+.galleryelem:hover .productinfo {
+  opacity: 1;
 }

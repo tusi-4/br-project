@@ -1,0 +1,90 @@
+@import '../../../styles/settings.scss';
+
+.root {
+ width: 80%;
+ height: 100vh;
+ padding: 48px;
+ margin: 0 auto;
+}
+
+.menuwrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  margin: 0 0 72px 0;
+}
+
+.menulink {
+  font-size: 18px;
+  font-weight: 600;
+  color: $lightgreen;
+  text-decoration: none;
+}
+
+.productwrapper {
+  max-width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.producttext {
+  display: flex;
+  align-items: flex-start;
+}
+
+.info {
+  flex: 2;
+  margin: 0;
+}
+
+h3 {
+  font-family: 'Comfortaa';
+  color: $midgreen;
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+h4 {
+  font-size: 30px;
+  font-weight: 500;
+  color: $darkgreen;
+  margin: 0 0 30px 0;
+}
+
+h5 {
+  font-size: 18px;
+  color: #000;
+  margin: 0 0 12px 0;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  padding: 0;
+  margin: 0 0 24px 0;
+}
+
+.description {
+  flex: 3;
+  display: inline-block;
+  height: 100%;
+  font-size: 24px;
+  color: $darkestgreen;
+  margin: 0;
+}
+
+.productgallery {
+ display: flex;
+ flex-wrap: wrap;
+ margin: 0 0 48px 0;
+}
+
+.productimg {
+ width: 25%;
+ height: 250px;
+ object-fit: cover;
+}

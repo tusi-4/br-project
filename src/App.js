@@ -28,10 +28,9 @@ const App = () => (
           <MainLayout>
             <Switch>
               <Route exact path='/' component={Homepage} />
-              <Route exact path='/product/:id' component={Product} />
+              <Route exact path='/products/abc' component={Product} />
               <Route exact path='/cart' component={Cart} />
               <Route exact path='/form' component={OrderForm} />
-
             </Switch>
           </MainLayout>
         </ThemeProvider>
