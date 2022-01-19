@@ -1,7 +1,7 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  background-color: $midgreen;
+  background-color: $darkgreen;
 }
 
 .superwrapper {
@@ -25,9 +25,53 @@
   text-decoration: none;
 }
 
-.cartwrapper {
-  max-width: 85%;
-  margin: 0 auto;
+.cartsummary {
+}
+
+h4 {
+  font-family: 'Comfortaa';
+  font-size: 30px;
+  font-weight: 500;
+  color: $lightgreen;
+  margin: 0 0 12px 0;
+}
+
+.itemdetails {
+  background-color: #fff;
+  width: 100%;
+  font-size: 15px;
+  color: $darkestgreen;
+  border: 0;
+  border-collapse: collapse;
+}
+
+tr {
+ border-bottom: $darkestgreen 2px solid;
+}
+
+td {
+  text-align: center;
+  padding: 0;
+}
+
+.itemimg {
+  width: 100%;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+.sum {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  text-align: right;
+  color: $midgreen;
+  margin: 12px 0 24px 0;
+}
+
+.formwrapper {
 }
 
 h3 {
@@ -38,64 +82,28 @@ h3 {
   margin: 0 0 12px 0;
 }
 
-.itemwrapper {
-  background-color: #fff;
-  border-radius: 6px;
-  margin: 24px 0 12px 0;
-  padding: 12px;
+.orderform {
+ display: flex;
+ flex-direction: column;
 }
 
-h5 {
-  font-size: 15px;
-  color: $darkestgreen;
-  margin: 0;
-}
-
-.itemdetails {
-  width: 100%;
-  font-size: 15px;
-  color: $darkestgreen;
-  border: 0;
-  border-collapse: collapse;
-}
-
-td {
-  width: 20%;
-  text-align: center;
-}
-
-.itemimg {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  display: block;
-}
-
-textarea {
-  width: 100%;
-  height: 96px;
-  padding: 12px;
-  border: $midgreen 0.5px solid;
-  border-radius: 6px;
+input {
+  width: 40%;
+  height: 36px;
+  padding: 6px;
+  border: $lightgreen 0.5px solid;
+  border-radius: 3px;
   background-color: #fff;
   font-family: 'Open Sans';
   font-size: 12px;
-  color: $darkgreen;
-  resize: none;
-}
-
-a {
-  font-weight: 600;
-  color: $midgreen;
-  text-decoration: none;
+  color: purple;
+  margin: 3px 0;
 }
 
 .link {
   display: block;
   width: 100%;
   font-size: 24px;
-  text-align: right;
   color: #fff;
-  margin: 0 0 24px 0;
+  margin: 6px 0 24px 0;
 }
-

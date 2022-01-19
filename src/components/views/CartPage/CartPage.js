@@ -41,7 +41,7 @@ const Component = (className) => (
     <div className={clsx(className, styles.superwrapper)}>
       <div className={clsx(className, styles.menuwrapper)}>
         <Link className={clsx(className, styles.menulink)} to="/">Homepage</Link>
-        <Link className={clsx(className, styles.menulink)} to="/cart">Cart</Link>
+        <Link className={clsx(className, styles.menulink)} to="/form">Order</Link>
       </div>
       <div className={clsx(className, styles.cartwrapper)}>
         <h3>Cart</h3>
@@ -66,6 +66,7 @@ const Component = (className) => (
             </table>
           </article>
         ))}
+        <Link className={clsx(className, styles.link)} to="/form">Order</Link>
       </div>
     </div>
   </div>
