@@ -37,7 +37,7 @@ const demoContent = [
 ];
 
 const Component = (className) => (
-  <div className={clsx(className, styles.root)}>
+  <div className={clsx(className, styles.formRoot)}>
     <div className={clsx(className, styles.formSuperwrapper)}>
       <div className={clsx(className, styles.formMenuwrapper)}>
         <Link className={clsx(className, styles.formMenulink)} to="/cart">Cart</Link>
@@ -64,15 +64,15 @@ const Component = (className) => (
         <span className={clsx(className, styles.formSum)}>Sum: cena całkowita</span>
       </div>
       <div className={clsx(className, styles.formWrapper)}>
-        <h3>Order form</h3>
-        <form className={clsx(className, styles.orderform)}>
+        <h3 className={clsx(className, styles.formH3)}>Order form</h3>
+        <form className={clsx(className, styles.formOrderform)}>
           <input className={clsx(className, styles.formInput)}  placeholder='name'></input>
           <input className={clsx(className, styles.formInput)}  placeholder='surname'></input>
           <input className={clsx(className, styles.formInput)}  placeholder='phone'></input>
           <input className={clsx(className, styles.formInput)}  placeholder='email'></input>
           <input className={clsx(className, styles.formInput)}  placeholder='street'></input>
           <input className={clsx(className, styles.formInput)}  placeholder='city'></input>
-          <Link className={clsx(className, styles.formLink)} to="/form">Submit</Link>
+          <Link className={clsx(className, styles.formSubmitlink)} to="/form">Submit</Link>
         </form>
       </div>
     </div>

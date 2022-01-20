@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use('/api', productsRoutes);
 
 app.use('/api', (req, res) => {
-  res.status(404).send({ product: 'Not found...'});
+  res.status(404).send({ products: 'Not found...'});
 });
 
 app.use(express.static(path.join(__dirname, '../build')));
@@ -26,8 +26,9 @@ const NODE_ENV = process.env.NODE_ENV;
 let dbUri = '';
 
 if(NODE_ENV === 'production') dbUri = 'mongodb+srv://tusi:babajaga@clusterbr.bv9km.mongodb.net/br-project?retryWrites=true&w=majority';
-else if(NODE_ENV === 'test') dbUri = 'mongodb://localhost:27011/br-project';
 else dbUri = 'mongodb://localhost:27017/br-project';
+
+dbUri = 'mongodb+srv://tusi:babajaga@clusterbr.bv9km.mongodb.net/br-project?retryWrites=true&w=majority';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;

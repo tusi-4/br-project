@@ -58,15 +58,15 @@ const Component = (className) => (
                   <td className={clsx(className, styles.cartpageTD)}>{item.minprice}$</td>
                   <td className={clsx(className, styles.cartpageTD)}>usuwacz</td>
                   <td className={clsx(className, styles.cartpageTD)}>
-                    <textarea placeholder="additional preferences, eg. no ice"></textarea>
-                    <a href="">add</a>
+                    <textarea className={clsx(className, styles.cartTextarea)} placeholder="additional preferences, eg. no ice"></textarea>
+                    <a className={clsx(className, styles.cartAddlink)} href="">add</a>
                   </td>
                 </tr>
               </tbody>
             </table>
           </article>
         ))}
-        <Link className={clsx(className, styles.cartpageLink)} to="/form">Order</Link>
+        <Link className={clsx(className, styles.cartpageOrderlink)} to="/form">Order</Link>
       </div>
     </div>
   </div>

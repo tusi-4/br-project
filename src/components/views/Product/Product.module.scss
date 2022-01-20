@@ -1,44 +1,43 @@
 @import '../../../styles/settings.scss';
 
-.root {
+.productRoot {
  width: 80%;
- height: 100vh;
  padding: 48px;
  margin: 0 auto;
 }
 
-.menuwrapper {
+.productMenuwrapper {
   display: flex;
   justify-content: space-between;
   padding: 12px;
   margin: 0 0 72px 0;
 }
 
-.menulink {
+.productMenulink {
   font-size: 18px;
   font-weight: 600;
   color: $lightgreen;
   text-decoration: none;
 }
 
-.productwrapper {
+.productProductwrapper {
   max-width: 85%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
 }
 
-.producttext {
+.productProducttext {
   display: flex;
   align-items: flex-start;
 }
 
-.info {
+.productInfo {
   flex: 2;
   margin: 0;
 }
 
-h3 {
+.productH3 {
   font-family: 'Comfortaa';
   color: $midgreen;
   font-size: 36px;
@@ -46,20 +45,20 @@ h3 {
   margin: 0 0 12px 0;
 }
 
-h4 {
+.productH4 {
   font-size: 30px;
   font-weight: 500;
   color: $darkgreen;
   margin: 0 0 30px 0;
 }
 
-h5 {
+.productH5 {
   font-size: 18px;
   color: #000;
   margin: 0 0 12px 0;
 }
 
-ul {
+.productUL {
   list-style-type: none;
   font-size: 15px;
   font-weight: 500;
@@ -68,7 +67,7 @@ ul {
   margin: 0 0 24px 0;
 }
 
-.description {
+.productDescription {
   flex: 3;
   display: inline-block;
   height: 100%;
@@ -77,14 +76,35 @@ ul {
   margin: 0;
 }
 
-.productgallery {
+.productProductgallery {
  display: flex;
  flex-wrap: wrap;
  margin: 0 0 48px 0;
 }
 
-.productimg {
+.productProductimg {
  width: 25%;
  height: 250px;
  object-fit: cover;
+}
+
+/* Media */
+@media (max-width: 991px) {
+  .productRoot {
+    width: 100%;
+    padding: 24px;
+  }
+  .productProductwrapper {
+    max-width: 100%;
+  }
+  .productProducttext {
+    flex-direction: column;
+  }
+  .productInfo {
+    width: 100%;
+  }
+  .productProductimg {
+    width: 50%;
+    height: 100%;
+  }
 }

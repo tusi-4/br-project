@@ -14,7 +14,7 @@ import { Footer } from '../../features/Footer/Footer';
 
 
 const Component = ({className}) => (
-  <div className={clsx(className, styles.root)}>
+  <div className={clsx(className, styles.homepageRoot)}>
     <Splash />
     <About />
     <ProductsList />

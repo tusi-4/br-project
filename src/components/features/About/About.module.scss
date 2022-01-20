@@ -1,14 +1,13 @@
 @import '../../../styles/settings.scss';
 
-.root {
+.aboutRoot {
   background-color: #fff;
   padding: 72px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
 }
 
-.header2 {
+.aboutH2 {
   color: #AB9E26;
   margin: 0 96px 24px 0;
 }
@@ -20,4 +19,14 @@
   font-size: 24px;
   font-weight: 500;
   color: #5E5715;
+}
+
+/* Media */
+@media (max-width: 767px) {
+  .aboutRoot {
+    flex-direction: column;
+  }
+  .about {
+    max-width: 100%;
+  }
 }

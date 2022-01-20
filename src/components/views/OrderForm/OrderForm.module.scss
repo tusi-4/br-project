@@ -1,12 +1,11 @@
 @import '../../../styles/settings.scss';
 
-.root {
+.formRoot {
   background-color: $darkgreen;
 }
 
 .formSuperwrapper {
   width: 80%;
-  height: 100vh;
   padding: 48px;
   margin: 0 auto;
 }
@@ -25,8 +24,9 @@
   text-decoration: none;
 }
 
-// .formCartsummary {
-// }
+.formCartsummary {
+  margin: 0 0 36px 0;
+}
 
 .formH4 {
   font-family: 'Comfortaa';
@@ -74,7 +74,7 @@
 // .formWrapper {
 // }
 
-h3 {
+.formH3 {
   font-family: 'Comfortaa';
   color: $lightgreen;
   font-size: 36px;
@@ -82,7 +82,7 @@ h3 {
   margin: 0 0 12px 0;
 }
 
-.orderform {
+.formOrderform {
  display: flex;
  flex-direction: column;
 }
@@ -96,14 +96,27 @@ h3 {
   background-color: $midgreen;
   font-family: 'Open Sans';
   font-size: 12px;
-  color: red;
+  color: #fff;
   margin: 3px 0;
 }
 
-.formLink {
+.formSubmitlink {
   display: block;
   width: 100%;
   font-size: 24px;
+  font-weight: 500;
+  text-decoration: none;
   color: #fff;
   margin: 6px 0 24px 0;
+}
+
+/* Media */
+@media (max-width: 991px) {
+  .formSuperwrapper {
+    width: 100%;
+    padding: 24px;
+  }
+  .formInput {
+    width: 80%;
+  }
 }
