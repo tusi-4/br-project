@@ -9,6 +9,7 @@
 .productMenuwrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 12px;
   margin: 0 0 72px 0;
 }
@@ -16,6 +17,7 @@
 .productMenulink {
   font-size: 18px;
   font-weight: 600;
+  line-height: 18px;
   color: $lightgreen;
   text-decoration: none;
 }
@@ -79,13 +81,24 @@
 .productProductgallery {
  display: flex;
  flex-wrap: wrap;
- margin: 0 0 48px 0;
+ margin: 0 0 12px 0;
 }
 
 .productProductimg {
  width: 25%;
  height: 250px;
  object-fit: cover;
+}
+
+.productAddlink {
+  display: block;
+  width: 100%;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: right;
+  text-decoration: none;
+  color: $lightgreen;
+  margin: 0 0 24px 0;
 }
 
 /* Media */

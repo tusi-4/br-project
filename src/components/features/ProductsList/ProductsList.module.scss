@@ -7,6 +7,16 @@
   flex-direction: column;
 }
 
+.productlistCart {
+  margin: 0 0 24px 0;
+  text-align: right;
+}
+
+.productlistIcon {
+  font-size: 24px;
+  color: $midgreen;
+}
+
 .productlistH2 {
   color: #fff;
   margin: 0 0 24px 0;
@@ -71,6 +81,9 @@
 
 /* Media */
 @media (max-width: 767px) {
+  .productlistRoot {
+    padding: 48px 36px;
+  }
   .productlistGallerywrapper {
     flex-direction: row;
     flex-wrap: wrap;
@@ -78,6 +91,15 @@
   .productlistGallerylink {
     width: 50%;
   }
+  .productlistH3 {
+    font-size: 24px;
+  }
+  .productlistPrice {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 991px) {
   .productlistH3 {
     font-size: 24px;
   }
