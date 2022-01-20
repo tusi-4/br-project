@@ -25,7 +25,7 @@
 .productlistGallerywrapper {
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: wrap;
 }
 
 .productlistGallerylink {
@@ -86,7 +86,7 @@
   }
   .productlistGallerywrapper {
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: wrap;
   }
   .productlistGallerylink {
     width: 50%;

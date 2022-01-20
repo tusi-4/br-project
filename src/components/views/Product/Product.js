@@ -65,6 +65,7 @@ const mapStateToProps = (state, props) => {
 
 const mapDispatchToProps = (dispatch, props) => ({
   fetchOne: () => dispatch(fetchProductById(props.match.params.id)),
+
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);

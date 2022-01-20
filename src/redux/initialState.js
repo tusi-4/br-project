@@ -66,4 +66,39 @@ export const initialState = {
     },
     product: {},
   },
+  cart: {
+    data: [
+      {
+        id: '61e73461238fc0f164fb3de3',
+        name: 'Winter mood',
+        images: [
+          'https://images.pexels.com/photos/8679129/pexels-photo-8679129.jpeg',
+          'https://images.pexels.com/photos/8679123/pexels-photo-8679123.jpeg',
+          'https://images.pexels.com/photos/8679132/pexels-photo-8679132.jpeg',
+        ],
+        amount: 2,
+        finalPrice: 44,
+        extras: 'Without alcohol',
+      },
+
+      {
+        id: '61e735db238fc0f164fb3de4',
+        name: 'Vitamin T&C',
+        images: [
+          'https://images.pexels.com/photos/8679544/pexels-photo-8679544.jpeg',
+          'https://images.pexels.com/photos/8679549/pexels-photo-8679549.jpeg',
+          'https://images.pexels.com/photos/8679546/pexels-photo-8679546.jpeg',
+          'https://images.pexels.com/photos/8679541/pexels-photo-8679541.jpeg',
+        ],
+        amount: 1,
+        finalPrice: 15,
+        extras: '',
+      },
+    ],
+    loading: {
+      active: false,
+      error: false,
+    },
+    item: {},
+  },
 };
