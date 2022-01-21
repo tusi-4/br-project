@@ -46,7 +46,7 @@ export const initialState = {
 
       {
         id: '61e735db238fc0f164fb3de4',
-        name: 'Vitamin T&C',
+        name: 'Vitamin C & T',
         images: [
           'https://images.pexels.com/photos/8679544/pexels-photo-8679544.jpeg',
           'https://images.pexels.com/photos/8679549/pexels-photo-8679549.jpeg',
@@ -82,16 +82,14 @@ export const initialState = {
       },
 
       {
-        id: '61e735db238fc0f164fb3de4',
-        name: 'Vitamin T&C',
+        id: '61e733a6238fc0f164fb3de2',
+        name: 'Oui, Kiwi!',
         images: [
-          'https://images.pexels.com/photos/8679544/pexels-photo-8679544.jpeg',
-          'https://images.pexels.com/photos/8679549/pexels-photo-8679549.jpeg',
-          'https://images.pexels.com/photos/8679546/pexels-photo-8679546.jpeg',
-          'https://images.pexels.com/photos/8679541/pexels-photo-8679541.jpeg',
+          'https://images.pexels.com/photos/8679178/pexels-photo-8679178.jpeg',
+          'https://images.pexels.com/photos/8679168/pexels-photo-8679168.jpeg',
         ],
         amount: 1,
-        finalPrice: 15,
+        finalPrice: 17,
         extras: '',
       },
     ],

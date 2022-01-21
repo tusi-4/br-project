@@ -1,0 +1,35 @@
+@import '../../../styles/settings.scss';
+
+.amountRoot {
+  text-align: center;
+  font-size: 24px;
+  padding:24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amountButton {
+  background: none;
+  margin: 6px;
+  border: none;
+  padding: 6px;
+  align-items: center;
+  :hover {
+    cursor: pointer;
+  }
+}
+
+.amountIcon {
+  font-size: 18px;
+  margin: auto;
+  padding: 0;
+}
+
+.amountInput {
+  margin: 0;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  font-size: 18px;
+}

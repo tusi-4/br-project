@@ -1,6 +1,10 @@
 @import '../../../styles/settings.scss';
 
 .productRoot {
+  background-color: #fff;
+}
+
+.productSuperwrapper {
  width: 80%;
  padding: 48px;
  margin: 0 auto;
@@ -88,6 +92,10 @@
  width: 25%;
  height: 250px;
  object-fit: cover;
+}
+
+.productAmount {
+  background-color: darkgoldenrod;
 }
 
 .productAddlink {

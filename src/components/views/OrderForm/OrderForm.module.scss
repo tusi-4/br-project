@@ -68,13 +68,23 @@
   margin: 0;
 }
 
-.formSum {
+.formDelivery {
   display: block;
   width: 100%;
   font-size: 18px;
   text-align: right;
   color: $midgreen;
-  margin: 12px 0 24px 0;
+  margin: 12px 0 6px 0;
+}
+
+.formSum {
+  display: block;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: right;
+  color: $midgreen;
+  margin: 6px 0 24px 0;
 }
 
 // .formWrapper {

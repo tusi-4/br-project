@@ -6,19 +6,22 @@ import styles from './ProductsList.module.scss';
 
 import { connect } from 'react-redux';
 import { getAllProducts, fetchAllProducts } from '../../../redux/productsRedux.js';
+import { getProductsInCart, fetchCartProducts } from '../../../redux/cartRedux';
 
 import { Link } from 'react-router-dom';
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
-const Component = ({className, products, fetchProducts}) => {
+const Component = ({className, products, fetchProducts, cart, fetchCart}) => {
   fetchProducts();
+  fetchCart();
 
   return (
     <div id="products-list" className={clsx(className, styles.productlistRoot)}>
       <div className={clsx(className, styles.productlistCart)}>
         <Link className={clsx(className, styles.productMenulink)} to="/cart">
           <ShoppingCartOutlinedIcon className={clsx(className, styles.productlistIcon)} />
+          <p className={clsx(className, styles.productlistAmount)}>({cart.length})</p>
         </Link>
       </div>
       <h2 className={clsx(className, styles.productlistH2)}>beverages</h2>
@@ -43,14 +46,18 @@ Component.propTypes = {
   className: PropTypes.string,
   products: PropTypes.array,
   fetchProducts: PropTypes.func,
+  cart: PropTypes.array,
+  fetchCart: PropTypes.func,
 };
 
 const mapStateToProps = state => ({
   products: getAllProducts(state),
+  cart: getProductsInCart(state),
 });
 
 const mapDispatchToProps = dispatch => ({
   fetchProducts: () => dispatch(fetchAllProducts()),
+  fetchCart: () => dispatch(fetchCartProducts()),
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
