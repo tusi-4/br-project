@@ -9,8 +9,6 @@ import { About } from '../../features/About/About';
 import { ProductsList } from '../../features/ProductsList/ProductsList';
 import { Footer } from '../../features/Footer/Footer';
 
-/* to remove */ import { AmountWidget } from '../../features/AmountWidget/AmountWidget';
-
 // import { connect } from 'react-redux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 

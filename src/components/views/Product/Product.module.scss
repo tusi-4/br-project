@@ -1,13 +1,11 @@
 @import '../../../styles/settings.scss';
 
 .productRoot {
+  width: 80%;
+  height: 100%;
+  padding: 48px;
+  margin: 0 auto;
   background-color: #fff;
-}
-
-.productSuperwrapper {
- width: 80%;
- padding: 48px;
- margin: 0 auto;
 }
 
 .productMenuwrapper {
@@ -85,7 +83,7 @@
 .productProductgallery {
  display: flex;
  flex-wrap: wrap;
- margin: 0 0 12px 0;
+ margin: 24px 0;
 }
 
 .productProductimg {
@@ -94,8 +92,14 @@
  object-fit: cover;
 }
 
-.productAmount {
-  background-color: darkgoldenrod;
+.productAmountselect {
+  width: 60px;
+  height: 36px;
+  margin: 12px 0 3px 0;
+  font-size: 18px;
+  padding: 0 6px;
+  border: $lightgreen 1px solid;
+  border-radius: 3px;
 }
 
 .productAddlink {
@@ -103,10 +107,9 @@
   width: 100%;
   font-size: 24px;
   font-weight: 500;
-  text-align: right;
   text-decoration: none;
   color: $lightgreen;
-  margin: 0 0 24px 0;
+  margin: 6px 0 24px 0;
 }
 
 /* Media */
