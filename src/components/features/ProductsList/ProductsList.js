@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import clsx from 'clsx';
 import styles from './ProductsList.module.scss';
 
 import { connect } from 'react-redux';
@@ -12,27 +11,27 @@ import { Link } from 'react-router-dom';
 
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 
-const Component = ({className, products, fetchProducts, cart, fetchCart}) => {
+const Component = ({products, fetchProducts, cart, fetchCart}) => {
   fetchProducts();
   fetchCart();
 
   return (
-    <div id="products-list" className={clsx(className, styles.productlistRoot)}>
-      <div className={clsx(className, styles.productlistCart)}>
-        <Link className={clsx(className, styles.productMenulink)} to="/cart">
-          <ShoppingCartOutlinedIcon className={clsx(className, styles.productlistIcon)} />
-          <p className={clsx(className, styles.productlistAmount)}>({cart.length})</p>
+    <div id="products-list" className={styles.root}>
+      <div className={styles.cart}>
+        <Link className={styles.menuLink} to="/cart">
+          <ShoppingCartOutlinedIcon className={styles.menuIcon} />
+          <p className={styles.amount}>({cart.length})</p>
         </Link>
       </div>
-      <h2 className={clsx(className, styles.productlistH2)}>beverages</h2>
-      <div className={clsx(className, styles.productlistGallerywrapper)}>
+      <h2 className={styles.h2}>beverages</h2>
+      <div className={styles.galleryWrapper}>
         {products && products.length > 0 && products.map(product => (
-          <Link className={clsx(className, styles.productlistGallerylink)} to={`products/${product.id}`} key={product.id}>
-            <div className={clsx(className, styles.productlistGalleryelem)}>
-              <img className={clsx(className, styles.productlistProductimg)} alt={product.name} src={product.images[1]} />
-              <div className={clsx(className, styles.productlistProductinfo)}>
-                <h3 className={clsx(className, styles.productlistH3)}>{product.name}</h3>
-                <span className={clsx(className, styles.productlistPrice)}>{product.minprice}$</span>
+          <Link className={styles.galleryLink} to={`products/${product.id}`} key={product.id}>
+            <div className={styles.galleryElem}>
+              <img className={styles.productImg} alt={product.name} src={product.images[0]} />
+              <div className={styles.productInfo}>
+                <h3 className={styles.h3}>{product.name}</h3>
+                <span className={styles.price}>{product.price}$</span>
               </div>
             </div>
           </Link>
@@ -43,7 +42,6 @@ const Component = ({className, products, fetchProducts, cart, fetchCart}) => {
 };
 
 Component.propTypes = {
-  className: PropTypes.string,
   products: PropTypes.array,
   fetchProducts: PropTypes.func,
   cart: PropTypes.array,

@@ -14,10 +14,10 @@ const ERROR_FETCH = createActionName('ERROR_FETCH');
 const ADD_PRODUCT = createActionName('ADD_PRODUCT');
 
 /* action creators */
-const startFetch = payload => ({ payload, type: START_FETCH });
-const successFetch = payload => ({ payload, type: SUCCESS_FETCH });
-const errorFetch = payload => ({ payload, type: ERROR_FETCH });
-//const addProduct = payload => ({ payload, type: ADD_PRODUCT });
+export const startFetch = payload => ({ payload, type: START_FETCH });
+export const successFetch = payload => ({ payload, type: SUCCESS_FETCH });
+export const errorFetch = payload => ({ payload, type: ERROR_FETCH });
+export const addProduct = payload => ({ payload, type: ADD_PRODUCT });
 
 /* thunk creators */
 export const fetchCartProducts = () => {
@@ -38,7 +38,7 @@ export const fetchCartProducts = () => {
   };
 };
 
-// dżizas nie wiem
+// czy potrzebuje thunka, zeby dodawac do koszyka? przeciez nie postuje tego nigdzie
 
 /* reducer */
 export const reducer = (statePart = [], action = {}) => {
@@ -69,6 +69,12 @@ export const reducer = (statePart = [], action = {}) => {
           active: false,
           error: action.payload,
         },
+      };
+    }
+    case ADD_PRODUCT: {
+      return {
+        ...statePart,
+        data: [...statePart.data, action.payload],
       };
     }
     default:

@@ -1,12 +1,12 @@
 @import '../../../styles/settings.scss';
 
-.aboutRoot {
+.root {
   padding: 72px;
   display: flex;
   flex-direction: row;
 }
 
-.aboutH2 {
+.h2 {
   color: #AB9E26;
   margin: 0 96px 24px 0;
 }
@@ -22,7 +22,7 @@
 
 /* Media */
 @media (max-width: 767px) {
-  .aboutRoot {
+  .root {
     flex-direction: column;
     padding: 48px 36px;
   }

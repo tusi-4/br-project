@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import clsx from 'clsx';
 import styles from './OrderForm.module.scss';
 
 import { connect } from 'react-redux';
@@ -9,48 +8,48 @@ import { getProductsInCart, fetchCartProducts } from '../../../redux/cartRedux';
 
 import { Link } from 'react-router-dom';
 
-const Component = ({className, cart, fetchCart}) => {
+const Component = ({cart, fetchCart}) => {
   fetchCart();
 
   return (
-    <div className={clsx(className, styles.formRoot)}>
-      <div className={clsx(className, styles.formSuperwrapper)}>
-        <div className={clsx(className, styles.formMenuwrapper)}>
-          <Link className={clsx(className, styles.formMenulink)} to="/cart">Cart</Link>
-          <Link className={clsx(className, styles.formMenulink)} to="/">Homepage</Link>
+    <div className={styles.root}>
+      <div className={styles.superWrapper}>
+        <div className={styles.menuWrapper}>
+          <Link className={styles.menuLink} to="/cart">Cart</Link>
+          <Link className={styles.menuLink} to="/">Homepage</Link>
         </div>
-        <div className={clsx(className, styles.formDataWrapper)}>
-          <div className={clsx(className, styles.formCartsummary)}>
-            <h4 className={clsx(className, styles.formH4)}>Cart summary</h4>
+        <div className={styles.dataWrapper}>
+          <div className={styles.cartSummary}>
+            <h4 className={styles.h4}>Cart summary</h4>
             {cart && cart.length > 0 && cart.map(item => (
-              <table key={item.id} className={clsx(className, styles.formItemdetails)}>
+              <table key={item.id} className={styles.itemDetails}>
                 <tbody>
-                  <tr className={clsx(className, styles.formTR)}>
-                    <td className={clsx(className, styles.formTD)}>
-                      <img className={clsx(className, styles.formItemimg)} alt={item.name} key={item.images[0]} src={item.images[0]} />
+                  <tr className={styles.tr}>
+                    <td className={styles.td}>
+                      <img className={styles.itemImg} alt={item.name} key={item.images[0]} src={item.images[0]} />
                     </td>
-                    <td className={clsx(className, styles.formTD)}>
+                    <td className={styles.td}>
                       {item.name}
                     </td>
-                    <td className={clsx(className, styles.formTD)}>{item.amount}</td>
-                    <td className={clsx(className, styles.formTD)}>{item.finalPrice}$</td>
+                    <td className={styles.td}>{item.amount}</td>
+                    <td className={styles.td}>{item.price}$</td>
                   </tr>
                 </tbody>
               </table>
             ))}
-            <span className={clsx(className, styles.formDelivery)}>Delivery: 12$</span>
-            <span className={clsx(className, styles.formSum)}>Sum: cena całkowita</span>
+            <span className={styles.delivery}>Delivery: 12$</span>
+            <span className={styles.sum}>Sum: cena całkowita</span>
           </div>
-          <div className={clsx(className, styles.formWrapper)}>
-            <h3 className={clsx(className, styles.formH3)}>Order form</h3>
-            <form className={clsx(className, styles.formOrderform)}>
-              <input className={clsx(className, styles.formInput)}  placeholder='name'></input>
-              <input className={clsx(className, styles.formInput)}  placeholder='surname'></input>
-              <input className={clsx(className, styles.formInput)}  placeholder='phone'></input>
-              <input className={clsx(className, styles.formInput)}  placeholder='email'></input>
-              <input className={clsx(className, styles.formInput)}  placeholder='street'></input>
-              <input className={clsx(className, styles.formInput)}  placeholder='city'></input>
-              <Link className={clsx(className, styles.formSubmitlink)} to="/form">Submit</Link>
+          <div className={styles.formWrapper}>
+            <h3 className={styles.h3}>Order form</h3>
+            <form className={styles.orderForm}>
+              <input className={styles.input}  placeholder='name'></input>
+              <input className={styles.input}  placeholder='surname'></input>
+              <input className={styles.input}  placeholder='phone'></input>
+              <input className={styles.input}  placeholder='email'></input>
+              <input className={styles.input}  placeholder='street'></input>
+              <input className={styles.input}  placeholder='city'></input>
+              <Link className={styles.submitLink} to="/form">Submit</Link>
             </form>
           </div>
         </div>
@@ -60,7 +59,6 @@ const Component = ({className, cart, fetchCart}) => {
 };
 
 Component.propTypes = {
-  className: PropTypes.string,
   cart: PropTypes.array,
   fetchCart: PropTypes.func,
 };

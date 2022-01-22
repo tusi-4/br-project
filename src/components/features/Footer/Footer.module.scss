@@ -1,6 +1,6 @@
 @import '../../../styles/settings.scss';
 
-.footerRoot {
+.root {
   background-color: #5E5A31;
   padding: 24px;
   display: flex;
@@ -8,7 +8,7 @@
   justify-content: space-around;
 }
 
-.footerContact {
+.contact {
   list-style-type: none;
   font-size: 12px;
   color: #fff;
@@ -21,14 +21,11 @@
   }
 }
 
-.footerLogomini {
+.logoMini {
   height: 72px;
   margin: 0;
 }
 
 /* Media */
 @media (max-width: 767px) {
-  .footerRoot {
-
-  }
 }

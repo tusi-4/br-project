@@ -1,18 +1,18 @@
 @import '../../../styles/settings.scss';
 
-.productlistRoot {
+.root {
   background-color: #E3D876;
   padding: 72px;
   display: flex;
   flex-direction: column;
 }
 
-.productlistCart {
+.cart {
   margin: 0 0 24px 0;
   text-align: right;
 }
 
-.productMenulink {
+.menuLink {
   display: inline-flex;
   justify-content: flex-end;
   align-items: center;
@@ -21,53 +21,45 @@
   text-decoration: none;
 }
 
-.productlistIcon {
+.menuIcon {
   margin: 0 3px;
   font-size: 24px;
 }
 
-.productlistAmount {
+.amount {
   font-weight: 600;
   margin: 0;
 }
 
-.productlistH2 {
+.h2 {
   color: #fff;
   margin: 0 0 24px 0;
 }
 
-.productlistGallerywrapper {
+.galleryWrapper {
   display: flex;
   flex-direction: row;
   flex-flow: wrap;
 }
 
-.productlistGallerylink {
+.galleryLink {
   position: relative;
   width: 25%;
   margin: 0;
   padding: 0;
 }
 
-// .productlistGalleryelem {
-//   position: relative;
-//   width: 33.3333%;
-//   margin: 0;
-//   padding: 0;
-// }
-
-.productlistProductimg {
+.productImg {
   width: 100%;
-  // height: auto;
   opacity: 1;
   display: block;
 }
 
-.productlistGalleryelem:hover .productlistProductimg {
+.galleryElem:hover .productImg {
   opacity: 0.2;
 }
 
-.productlistProductinfo {
+.productInfo {
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -78,46 +70,46 @@
   color: #5E5715;
 }
 
-.productlistH3 {
-  font-size: 48px;
+.h3 {
+  font-size: 42px;
   font-weight: 700;
   color: $darkestgreen;
+  margin: 0 0 24px 0;
 }
 
-.productlistPrice {
+.price {
   font-size: 36px;
 }
 
-.productlistGalleryelem:hover .productlistProductinfo {
+.galleryElem:hover .productInfo {
   opacity: 1;
 }
 
-
 /* Media */
 @media (max-width: 767px) {
-  .productlistRoot {
+  .root {
     padding: 48px 36px;
   }
-  .productlistGallerywrapper {
+  .galleryWrapper {
     flex-direction: row;
     flex-flow: wrap;
   }
-  .productlistGallerylink {
+  .galleryLink {
     width: 50%;
   }
-  .productlistH3 {
+  .h3 {
     font-size: 24px;
   }
-  .productlistPrice {
+  .price {
     font-size: 18px;
   }
 }
 
 @media (max-width: 991px) {
-  .productlistH3 {
+  .h3 {
     font-size: 24px;
   }
-  .productlistPrice {
+  .price {
     font-size: 18px;
   }
 }

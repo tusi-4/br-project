@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import clsx from 'clsx';
 import styles from './CartPage.module.scss';
 
 import { connect } from 'react-redux';
@@ -11,34 +10,34 @@ import { Link } from 'react-router-dom';
 
 import DeleteIcon from '@material-ui/icons/Delete';
 
-const Component = ({className, cart, fetchCart}) => {
+const Component = ({cart, fetchCart}) => {
   fetchCart();
 
   return (
-    <div className={clsx(className, styles.cartpageRoot)}>
-      <div className={clsx(className, styles.cartpageSuperwrapper)}>
-        <div className={clsx(className, styles.cartpageMenuwrapper)}>
-          <Link className={clsx(className, styles.cartpageMenulink)} to="/">Homepage</Link>
-          <Link className={clsx(className, styles.cartpageMenulink)} to="/form">Order</Link>
+    <div className={styles.root}>
+      <div className={styles.superWrapper}>
+        <div className={styles.menuWrapper}>
+          <Link className={styles.menuLink} to="/">Homepage</Link>
+          <Link className={styles.menuLink} to="/form">Order</Link>
         </div>
-        <div className={clsx(className, styles.cartpageWrapper)}>
-          <h3 className={clsx(className, styles.cartpageH3)}>Cart</h3>
+        <div className={styles.wrapper}>
+          <h3 className={styles.h3}>Cart</h3>
           {cart && cart.length > 0 && cart.map(item => (
-            <article key={item.id} className={clsx(className, styles.cartpageItemwrapper)}>
-              <h5 className={clsx(className, styles.cartpageH5)}>{item.name}</h5>
-              <table className={clsx(className, styles.cartpageItemdetails)}>
+            <article key={item.id} className={styles.itemWrapper}>
+              <h5 className={styles.h5}>{item.name}</h5>
+              <table className={styles.itemDetails}>
                 <tbody>
                   <tr>
-                    <td className={clsx(className, styles.cartpageTD)}>
-                      <img className={clsx(className, styles.cartpageItemimg)} alt={item.name} key={item.images[0]} src={item.images[0]} />
+                    <td className={styles.td}>
+                      <img className={styles.itemImg} alt={item.name} key={item.images[0]} src={item.images[0]} />
                     </td>
-                    <td className={clsx(className, styles.cartpageTD)}>x{item.amount}</td>
-                    <td className={clsx(className, styles.cartpageTD)}>{item.finalPrice}$</td>
-                    <td className={clsx(className, styles.cartpageTD)}>
-                      <DeleteIcon className={clsx(className, styles.productlistIcon)} />
+                    <td className={styles.td}>x{item.amount}</td>
+                    <td className={styles.td}>{item.price}$</td>
+                    <td className={styles.td}>
+                      <DeleteIcon className={styles.icon} />
                     </td>
-                    <td className={clsx(className, styles.cartpageTD)}>
-                      <textarea className={clsx(className, styles.cartTextarea)} placeholder="additional preferences, eg. no ice"></textarea>
+                    <td className={styles.td}>
+                      <textarea className={styles.textarea} placeholder="additional preferences, eg. no ice"></textarea>
 
                     </td>
                   </tr>
@@ -46,7 +45,7 @@ const Component = ({className, cart, fetchCart}) => {
               </table>
             </article>
           ))}
-          <Link className={clsx(className, styles.cartpageOrderlink)} to="/form">Order</Link>
+          <Link className={styles.orderLink} to="/form">Order</Link>
         </div>
       </div>
     </div>
@@ -54,7 +53,6 @@ const Component = ({className, cart, fetchCart}) => {
 };
 
 Component.propTypes = {
-  className: PropTypes.string,
   cart: PropTypes.array,
   fetchCart: PropTypes.func,
 };
