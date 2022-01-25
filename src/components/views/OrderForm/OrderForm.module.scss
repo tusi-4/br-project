@@ -52,12 +52,19 @@
 
 .tr {
  border-bottom: $darkgreen 6px solid;
+ display: flex;
+ justify-content: center;
+ align-items: center;
 }
 
 .td {
+  height: 48px;
   text-align: center;
   padding: 0;
-  width: 25%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .itemImg {
@@ -68,13 +75,13 @@
   margin: 0;
 }
 
-.delivery {
+.preSum {
   display: block;
   width: 100%;
-  font-size: 18px;
+  font-size: 15px;
   text-align: right;
   color: $midgreen;
-  margin: 12px 0 6px 0;
+  margin: 6px 0;
 }
 
 .sum {

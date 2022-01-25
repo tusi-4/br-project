@@ -23,7 +23,7 @@ const Component = ({cart, fetchCart}) => {
         <div className={styles.wrapper}>
           <h3 className={styles.h3}>Cart</h3>
           {cart && cart.length > 0 && cart.map(item => (
-            <article key={item.id} className={styles.itemWrapper}>
+            <article key={item._id} className={styles.itemWrapper}>
               <h5 className={styles.h5}>{item.name}</h5>
               <table className={styles.itemDetails}>
                 <tbody>

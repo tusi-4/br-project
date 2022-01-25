@@ -2,8 +2,8 @@ import Axios from 'axios';
 
 /* selectors */
 export const getAllProducts = ({products}) => products.data;
-export const getOneProduct = ({products}, id) => products.data.find(product => product.id === id );
-// export const getOneProduct = ({products}) => products.product;
+// export const getOneProduct = ({products}, id) => products.data.find(product => product.id === id );
+export const getOneProduct = ({products}) => products.product;
 
 /* action name creator */
 const reducerName = 'products';

@@ -105,13 +105,19 @@
 }
 
 .addLink {
-  display: block;
-  width: 100%;
+  width: fit-content;
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
   color: $lightgreen;
   margin: 6px 0 24px 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.addLink:hover {
+  cursor: pointer;
 }
 
 /* Media */

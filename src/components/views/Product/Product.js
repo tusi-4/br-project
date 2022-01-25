@@ -12,29 +12,30 @@ import { getProductsInCart, fetchCartProducts, addProduct } from '../../../redux
 import { Link } from 'react-router-dom';
 
 class Product extends React.Component {
-  constructor(props){
-    super(props);
-
-    this.state = {
-      item: {
-        id: '',
-        name: '',
-        images: '',
-        amount: '',
-        price: '',
-        extras: '',
-      },
-    };
-  }
-
   componentDidMount(){
     const { fetchOne, fetchCart } = this.props;
     fetchOne();
     fetchCart();
   }
 
+  addItem(item){
+    addProduct(item);
+  }
+
   render(){
-    const { cart, product } = this.props;
+    const { cart, product, addItem } = this.props;
+    const handleAddToCart = () => {
+      const item = {
+        _id: product._id,
+        name: product.name,
+        images: product.images[0],
+        amount: product.amount,
+        price: product.price,
+        extras: '',
+      };
+      if (item.quantity > 0) addItem(item);
+    };
+
     return (
       <div className={styles.root}>
         <div className={styles.superWrapper}>
@@ -83,7 +84,13 @@ class Product extends React.Component {
               <option value={9}>9</option>
               <option value={10}>10</option>
             </NativeSelect>
-            <Link className={styles.addLink} to="/form">Add to cart</Link>
+            <button
+              className={styles.addLink}
+              onClick={event => {
+                event.preventDefault();
+                return handleAddToCart(product._id, product.name, product.images, product.amount, product.price, product.extras);
+              }}
+            >Add to cart</button>
           </div>
         </div>
       </div>
@@ -111,7 +118,7 @@ const mapStateToProps = (state, props) => {
 const mapDispatchToProps = (dispatch, props) => ({
   fetchOne: () => dispatch(fetchProductById(props.match.params.id)),
   fetchCart: () => dispatch(fetchCartProducts()),
-  addItem: (item) => dispatch(addProduct()),
+  addItem: item => dispatch(addProduct(item)),
 });
 
 const Container = connect(mapStateToProps, mapDispatchToProps)(Product);

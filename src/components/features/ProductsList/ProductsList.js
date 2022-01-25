@@ -26,7 +26,7 @@ const Component = ({products, fetchProducts, cart, fetchCart}) => {
       <h2 className={styles.h2}>beverages</h2>
       <div className={styles.galleryWrapper}>
         {products && products.length > 0 && products.map(product => (
-          <Link className={styles.galleryLink} to={`products/${product.id}`} key={product.id}>
+          <Link className={styles.galleryLink} to={`products/${product._id}`} key={product._id}>
             <div className={styles.galleryElem}>
               <img className={styles.productImg} alt={product.name} src={product.images[0]} />
               <div className={styles.productInfo}>
