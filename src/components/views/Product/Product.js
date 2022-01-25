@@ -3,38 +3,59 @@ import PropTypes from 'prop-types';
 
 import styles from './Product.module.scss';
 
-import { NativeSelect } from '@material-ui/core';
-
 import { connect } from 'react-redux';
 import { getOneProduct, fetchProductById } from '../../../redux/productsRedux';
 import { getProductsInCart, fetchCartProducts, addProduct } from '../../../redux/cartRedux';
 
 import { Link } from 'react-router-dom';
 
+import AddIcon from '@material-ui/icons/Add';
+import RemoveIcon from '@material-ui/icons/Remove';
+
 class Product extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 1,
+    };
+  }
+
   componentDidMount(){
     const { fetchOne, fetchCart } = this.props;
     fetchOne();
     fetchCart();
   }
 
-  addItem(item){
-    addProduct(item);
+  increaseAmount(){
+    if(this.state.value < 20)
+      this.setState({
+        value: this.state.value + 1,
+      });
+  }
+
+  decreaseAmount(){
+    if(this.state.value > 1){
+      this.setState({
+        value: this.state.value -1,
+      });
+    }
+  }
+
+  handleChange(event) {
+    this.setState({ value: event.target.value });
   }
 
   render(){
     const { cart, product, addItem } = this.props;
-    const handleAddToCart = () => {
-      const item = {
-        _id: product._id,
-        name: product.name,
-        images: product.images[0],
-        amount: product.amount,
-        price: product.price,
-        extras: '',
-      };
-      if (item.quantity > 0) addItem(item);
+
+    const item = {
+      name: product.name,
+      images: product.images ,
+      amount: this.state.value,
+      price: product.price,
+      extras: product.extras,
     };
+    console.log('Item: ', item);
 
     return (
       <div className={styles.root}>
@@ -64,31 +85,39 @@ class Product extends React.Component {
                 <img className={styles.productImg} alt={product.name} key={image} src={image} />
               ))}
             </div>
-            {/* AMOUNT */}
-            <NativeSelect
-              className={styles.amountSelect}
-              defaultValue={1}
-              inputProps={{
-                name: 'Amount',
-                id: 'uncontrolled-native',
-              }}
-            >
-              <option value={1}>1</option>
-              <option value={2}>2</option>
-              <option value={3}>3</option>
-              <option value={4}>4</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
-            </NativeSelect>
+
+            <div className={styles.amountWidget}>
+              <button
+                className={styles.amountWidgetButton}
+                onClick={event => {
+                  event.preventDefault();
+                  this.decreaseAmount();
+                }}
+              >
+                <RemoveIcon className={styles.amountWidgetIcon} />
+              </button>
+              <input
+                className={styles.amountWidgetInput}
+                value={this.state.value}
+                name="AmountWidget"
+                onChange={this.handleChange}
+              />
+              <button
+                className={styles.amountWidgetButton}
+                onClick={event => {
+                  event.preventDefault();
+                  this.increaseAmount();
+                }}
+              >
+                <AddIcon className={styles.amountWidgetIcon} />
+              </button>
+            </div>
+
             <button
               className={styles.addLink}
               onClick={event => {
                 event.preventDefault();
-                return handleAddToCart(product._id, product.name, product.images, product.amount, product.price, product.extras);
+                addItem(item);
               }}
             >Add to cart</button>
           </div>

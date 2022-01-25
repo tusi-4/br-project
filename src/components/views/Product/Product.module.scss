@@ -94,14 +94,40 @@
  object-fit: cover;
 }
 
-.amountSelect {
-  width: 60px;
-  height: 36px;
-  margin: 12px 0 3px 0;
+.amountWidget {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+}
+
+.amountWidgetButton {
+  background: none;
+  margin: 6px 0;
+  border: none;
+  padding: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.amountWidgetButton:hover {
+  cursor: pointer;
+}
+
+.amountWidgetIcon {
   font-size: 18px;
-  padding: 0 6px;
-  border: $lightgreen 1px solid;
-  border-radius: 3px;
+  margin: auto;
+  padding: 0;
+}
+
+.amountWidgetInput {
+  background-color: none;
+  margin: 0;
+  height: 36px;
+  width: 36px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .addLink {

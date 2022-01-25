@@ -12,6 +12,9 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const Component = ({cart, fetchCart}) => {
   fetchCart();
+  const countPriceXAmount = function(price, amount){
+    return price * amount;
+  };
 
   return (
     <div className={styles.root}>
@@ -32,7 +35,7 @@ const Component = ({cart, fetchCart}) => {
                       <img className={styles.itemImg} alt={item.name} key={item.images[0]} src={item.images[0]} />
                     </td>
                     <td className={styles.td}>x{item.amount}</td>
-                    <td className={styles.td}>{item.price}$</td>
+                    <td className={styles.td}>{countPriceXAmount(item.price, item.amount)}$</td>
                     <td className={styles.td}>
                       <DeleteIcon className={styles.icon} />
                     </td>
