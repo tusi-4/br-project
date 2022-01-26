@@ -1,7 +1,6 @@
 {
   "name": "br-project",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "start": "run-p start:* server",
     "start-silent": "run-p start > /dev/null",
