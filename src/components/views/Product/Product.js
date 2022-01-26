@@ -55,7 +55,6 @@ class Product extends React.Component {
       price: product.price,
       extras: product.extras,
     };
-    console.log('Item: ', item);
 
     return (
       <div className={styles.root}>

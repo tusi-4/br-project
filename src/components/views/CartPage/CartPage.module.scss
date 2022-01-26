@@ -2,6 +2,7 @@
 
 .root {
   background-color: $lightgreen;
+  height: 100vh;
 }
 
 .superWrapper {
@@ -68,6 +69,15 @@
   height: 120px;
   object-fit: cover;
   display: block;
+}
+
+.itemDelete {
+  background: none;
+  border: none;
+}
+
+.itemDelete:hover {
+  cursor: pointer;
 }
 
 .textarea {
