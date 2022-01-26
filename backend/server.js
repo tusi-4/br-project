@@ -24,13 +24,9 @@ app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'));
 });
 
-const NODE_ENV = process.env.NODE_ENV;
 let dbUri = '';
 
-if(NODE_ENV === 'production') dbUri = 'mongodb+srv://tusi:babajaga@clusterbr.bv9km.mongodb.net/br-project?retryWrites=true&w=majority';
-else dbUri = 'mongodb://localhost:27017/br-project';
-
-// dbUri = 'mongodb+srv://tusi:babajaga@clusterbr.bv9km.mongodb.net/br-project?retryWrites=true&w=majority';
+dbUri = 'mongodb+srv://tusi:babajaga@clusterbr.bv9km.mongodb.net/br-project?retryWrites=true&w=majority';
 
 mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
 const db = mongoose.connection;
