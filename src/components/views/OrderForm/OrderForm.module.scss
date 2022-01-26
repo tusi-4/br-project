@@ -124,13 +124,19 @@
 }
 
 .submitLink {
-  display: block;
-  width: 100%;
+  width: fit-content;
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
   color: #fff;
   margin: 6px 0 24px 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.submitLink:hover {
+  cursor: pointer;
 }
 
 /* Media */
